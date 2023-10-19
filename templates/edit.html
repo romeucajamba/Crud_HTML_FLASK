@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editados</title>
+</head>
+<body>
+<h1>Editar {{estudante.nome}}</h1>
+<form action="/edit/{{edit.estudante}}" method="post">
+    <div>
+        <div>
+            <input type="text" name="nome" id="nome" placeholder="nome" value="{{estudante.nome}}"/>
+        </div>
+        <div>
+            <input type="text" name="idade" id="idade" placeholder="idade" value="{{estudante.idade}}/>
+        </div>
+        <div>
+            <button type="submit">Enviar</button>
+        </div>
+    </div>
+</body>
+</html>

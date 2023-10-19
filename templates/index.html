@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<h1>Crud Estudantes</h1>
+<div>
+    <div>
+        <div>
+            <a href="/add">Adicionar estudantes</a>
+        </div>
+        <div>
+            <table>
+    <thead>
+   <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Ações</th>
+   </tr>
+    </thead>
+    <tbody>
+        {% for e in estudantes %}
+    <tr>
+        <td>{{e.name}}</td>
+        <td>{{e.age}}</td>
+        <td>
+            <a href="/edit/{{e.id}}">Editar</a>
+            <a href="/delete/{{e.id}}">Excluir</a>
+
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
